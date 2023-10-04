@@ -7,18 +7,41 @@ function Login() {
 
     const handleLogin = () => {
       if (username === 'admin' && password === 'password') {
-        alert('Login successful');
+        console.log('Login successful');
       } else {
-        alert('Login failed');
+        console.log('Login failed');
       }
-    };
-    const handlesignup = () => {
-     window.location.href='signup';
     };
 
   return (
   
-  <>    <div className="login-container">
+  <>
+  <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+    <div class="position-sticky">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    Products
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    Orders
+                </a>
+            </li>
+          
+        </ul>
+    </div>
+</nav>
+
+
+
+    <div className="login-container">
       <h2>Login</h2>   
       <form className="login-form">
         <div>
@@ -35,11 +58,9 @@ function Login() {
           Login
         </button>
 
-        <button id='bt2' type="button" onClick={handlesignup}>
+        <button id='bt2' type="button" onClick={handleLogin}>
           Sign Up
         </button>
-        
-       
       </form>
     </div>
     </>
