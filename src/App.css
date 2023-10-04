@@ -128,7 +128,7 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: px) {
   .sidebar a {
     text-align: center;
     float: none;

@@ -1,8 +1,24 @@
 import "./App.css";
-import Sidebar from "./components/Sidebar";
+import Login from "./components/login";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
-  return (<Sidebar/>);
+  return (
+ 
+      <BrowserRouter>
+      <Routes>
+     
+        <Route exact path="" element={<Login/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/home" element={<Home/>} />
+        <Route path="/Navbar" element={<Navbar/>}/>
+      
+    </Routes>
+    </BrowserRouter>
+   
+  );
 }
 
 export default App;
