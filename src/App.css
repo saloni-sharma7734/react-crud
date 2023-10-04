@@ -46,7 +46,7 @@
 background-image: url('./components/img.jpg'); /* Replace with the actual path to your image */
 background-size: cover; /* Adjust as needed */
 background-position: center; /* Adjust as needed */
-height: 120vh;
+height: 100%;
 }
 .text{
   padding:54px;
@@ -56,8 +56,9 @@ height: 120vh;
 }
 .text p{
   font-size: 27px;
+  width: 72%;
 }
-.card{
+/* .card{
   width: 85%;
-  height: 40vh;
-}
+
+} */
