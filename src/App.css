@@ -32,50 +32,117 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-<<<<<<< HEAD
 
-.logo{
+.logo {
   width: 50vh;
   height: 10vh;
 }
-.sidebar{
-  border: 1px solid black;
-  width: 30%;
+
+.sidebar {
+  border: 1px solid #fff;
+  box-shadow: #282c34;
+  width: 20%;
   padding-bottom: 50vh;
 }
-.sidebar ul{
-  padding: 25px;
-}
-.sidebar a {
-  color: grey;
-=======
-.logo1{
-  color: white;
-}
-#home a{ 
+
+#home a {
   color: white
 }
-.image{
-background-image: url('./components/img.jpg'); /* Replace with the actual path to your image */
-background-size: cover; /* Adjust as needed */
-background-position: center; /* Adjust as needed */
-height: 120vh;
+
+.image {
+  background-image: url('./components/img.jpg');
+  /* Replace with the actual path to your image */
+  background-size: cover;
+  /* Adjust as needed */
+  background-position: center;
+  /* Adjust as needed */
+  height: 120vh;
 }
-.text{
-  padding:54px;
+
+.text {
+  padding: 54px;
   color: white;
   justify-content: flex-start;
   font-size: 50px;
 }
-.text p{
+
+.text p {
   font-size: 27px;
 }
-.card{
+
+.card {
   width: 85%;
   height: 40vh;
->>>>>>> a244047cc37f0db316f76f0dfb69c64ad22d9b67
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 50vh;
+  background-color: #fff;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+.sidebar img{
+  width: 40vh;
+  margin-left: 25px;
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 25px;
+  text-decoration: none;
+  font-family : Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  margin-left: 4vh;
+}
+
+.sidebar a.active {
+  background-color: #016dd7;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #000;
+  color: white;
+}
+@media screen and (max-width: 576px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar a {
+    float: left;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+.avatar img{
+  width: 12vh;
+  padding: 10px;
+  border-radius: 101px;
+}
+.avatar{
+  margin-top: 3vh;
+  float: right;
+  margin-right: 2vh;
+  padding: 20px;
+  background-color: #fff;
 }

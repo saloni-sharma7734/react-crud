@@ -1,38 +1,23 @@
-import React, { Component } from "react";
-import image1 from '../vidhema-logo-black.png';
-export class Sidebar extends Component {
-  render() {
-    return (
-      <>
-        <div className="sidebar">
-          <img src={image1} alt="logo" class="logo m-4" />
-
-          <ul className="nav flex-column">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
-                DASHBOARD
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">
-                PROFILE
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">
-                PROJECT
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">
-                BLOG
-              </a>
-            </li>
-          </ul>
-        </div>
-      </>
-    );
-  }
+import React from "react";
+import image1 from "../vidhema-logo-black.png";
+import avatar from "../avatar.jpg"
+export default function Sidebar() {
+  return (
+    <>
+      <div className="sidebar">
+        <img src={image1} alt="" className="mt-5 mb-5 mx-3" />
+        <a className="active" href="#home" className="sidenav">
+          DASHBOARD
+        </a>
+        <a href="#news">PROFILE</a>
+        <a href="#contact">PROJECT</a>
+        <a href="#about">BLOG</a>
+      </div>
+      <div className="avatar">
+        <button className="btn btn-primary p-2 px-3">Logout</button>
+        <img src={avatar} alt="avatar"></img>
+      </div>
+    </>
+  );
 }
 
-export default Sidebar;
