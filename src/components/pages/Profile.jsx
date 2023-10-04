@@ -19,7 +19,11 @@ export default function Profile(){
             </div>
             <div className="form-group my-2">
                 <label for="email" className="headings"><b>User Name</b></label><br/>
-                <input type="email" className="form-control my-2" id="email" style={fstyle} placeholder="Enter your username"/>
+                <input type="text" className="form-control my-2" id="email" style={fstyle} placeholder="Enter your username"/>
+            </div>
+            <div className="form-group my-2">
+                <label for="pnumber" className="headings"><b>Phone Number</b></label><br/>
+                <input type="number" className="form-control my-2" id="pnumber" style={fstyle} placeholder="Enter your phone number"/>
             </div>
             <div className="form-group my-2">
                 <label for="email" className="headings"><b>Email id</b></label><br/>
