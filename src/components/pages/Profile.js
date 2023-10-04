@@ -7,6 +7,7 @@ export default function Profile(){
     };
 
   return (
+    <>
     <div className="container-fluid my-lg-5">
       <form>
       <div className="form-group">
@@ -49,6 +50,7 @@ export default function Profile(){
             <button type="submit" className="btn btn-primary">Back</button>
         </form>
     </div>
+    </>
   );
 }
 
