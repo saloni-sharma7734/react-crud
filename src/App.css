@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+.logo1{
+  color: white;
+}
+#home a{ 
+  color: white
+}
+.image{
+background-image: url('./components/img.jpg'); /* Replace with the actual path to your image */
+background-size: cover; /* Adjust as needed */
+background-position: center; /* Adjust as needed */
+height: 120vh;
+}
+.text{
+  padding:54px;
+  color: white;
+  justify-content: flex-start;
+  font-size: 50px;
+}
+.text p{
+  font-size: 27px;
+}
+.card{
+  width: 85%;
+  height: 40vh;
+}
