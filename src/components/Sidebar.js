@@ -31,9 +31,9 @@ export default function Sidebar() {
             <img src={table} alt=".." />
             BLOG
           </Link>
-          <Link to="/project">
+          <Link to="/Home">
             <img src={kanban} alt=".." />
-            PROJECT
+            logout
           </Link>
           <Link to="/profile">
             <img src={profile} alt=".." />

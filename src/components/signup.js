@@ -9,7 +9,7 @@ function Signup() {
     window.location.href = "login";
   };
   const handlesignup = () => {
-    alert("signup successful");
+    window.location.href = "login";
   };
 
   return (

@@ -7,16 +7,12 @@ function Login() {
   const [password, setPassword] = useState('');
 
     const handleLogin = () => {
-      if (username === 'admin' && password === 'password') {
-        alert('Login successful');
-      } else {
-        alert('Login failed');
-      }
+      window.location.href='Dashboard';
     };
     const handlesignup = () => {
      window.location.href='signup';
     };
-
+    
   return (
   
   <>    <div className="login-container">
