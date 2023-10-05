@@ -13,7 +13,7 @@ export default function Profile() {
         <Sidebar />
         <div className="container my-lg-5 profile">
           <form>
-            <div className="form-group">
+            <div className="form-group">        
               <img src={myimage1} alt=".." />
               <label for="image">
                 &nbsp;<b>Profile Image</b>
