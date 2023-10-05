@@ -1,21 +1,24 @@
-import logo from "./logo.svg";
+
 import "./App.css";
-import Sidebar from "./components/Sidebar";
 import Profile from "../src/components/pages/Profile/Profile";
 import Login from "../src/components/login";
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/pages/Dashboard";
 import Blog from "./components/Blog";
+import Signup from "./components/signup";
+import Navbar from"./components/Navbar";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route>
+          <Route path = "/login" element = {<Login/>}/>
+          <Route path = "/signup" element = {<Signup/>}/>
           <Route path = "/dashboard" element={<Dashboard/>}/>
           <Route path = "/profile" element={<Profile/>}/>
           <Route path = "/login" element={<Login/>}/>
           <Route path = "/blog" element = {<Blog/>}/>
+          <Route path = "/Navbar" element = {<Navbar/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

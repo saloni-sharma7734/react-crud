@@ -1,55 +1,95 @@
-import React,{useState} from 'react';
-import'./signup.css'
+import React, { useState } from "react";
+import "../components/signup.css";
 
 function Signup() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-  
-      const handleLogin = () => {
-      window.location.href='login';
-      };
-      const handlesignup = () => {
-       alert('signup successful');
-      };
-  
-    return (
-    
-    <>    
-    <div className="signup-container">
-        <h2>Signup</h2>   
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    window.location.href = "login";
+  };
+  const handlesignup = () => {
+    alert("signup successful");
+  };
+
+  return (
+    <>
+    <div className="bg-img">
+      <div className="signup-container">
         <form className="signup-form">
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" value={username} onChange={(e) => setUsername(e.target.value)} />
+          <div className="row">
+            <div className="col">
+              <label>
+                <h2>Signup</h2>{" "}
+              </label>
+            </div>
           </div>
-  
-          <div>
-            <label htmlFor="password">Password:</label>
-            <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}
-            />
+          <div className="row">
+            <div className="col">
+              <label htmlFor="name">Name:</label>
+            </div>
+            <div className="col">
+              <input
+                type="text"
+                id="name"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
           </div>
-          <div>
-            <label htmlFor="password">Moblie Number:</label>
-            <input type="number" id="number" value={password} ></input>
+
+          <div className="row">
+            <div className="col">
+              <label htmlFor="password">Password:</label>
+            </div>
+            <div className="col">
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
           </div>
-          <div>
-            <label htmlFor="Username">Username:</label>
-            <input type="text" id="username"  
-            />
+          <div className="row">
+            <div className="col">
+            <label htmlFor="number">Number:</label></div>
+            <div className="col"><input type="tel" id="number"></input></div>
           </div>
-          <button type="button" onClick={handleLogin} >
-            Login
-          </button>
-  
-          <button id='bt2' type="button" onClick={handlesignup}>
+          <div className="row">
+            <div className="col">
+            <label htmlFor="Age">Age:</label></div>
+            <div className="col"><input type="tel" id="age"></input></div>
+          </div>
+          <div className="row">
+            <div className="col">
+            <label htmlFor="Username">Username:</label></div>
+           <div className="col"> <input type="text" id="username" /></div>
+          </div>
+          <div className="row">
+            <div className="col">
+            <label htmlFor="Username">Sex:</label></div>
+           <div className="col"> <input type="text" id="username" /></div>
+          </div>
+          <div className="row">
+            <div className="col">
+            <label htmlFor="Username">Location:</label></div>
+           <div className="col"> <input type="text" id="username" /></div>
+          </div>
+          <button id="bt2" type="button" onClick={handlesignup}>
             Sign Up
           </button>
-          
+
+          <button type="button" onClick={handleLogin}>
+            Login
+          </button>
+
+        
         </form>
       </div>
-      </>
-    );
-  }
-  
-  export default Signup;
-  
+      </div>
+    </>
+  );
+}
+
+export default Signup;
