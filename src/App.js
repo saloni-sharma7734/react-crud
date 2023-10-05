@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar";
 import Profile from "../src/components/pages/Profile";
 import Login from "../src/components/login";
 import ReactDOM from "react-dom/client";
+import Home from './components/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/pages/Dashboard";
 import Blog from "./components/Blog";
@@ -16,6 +17,7 @@ function App() {
           <Route path = "/profile" element={<Profile/>}/>
           <Route path = "/login" element={<Login/>}/>
           <Route path = "/blog" element = {<Blog/>}/>
+          <Route path ="/Home" element={<Home/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -38,46 +38,11 @@
   }
 }
 
-.logo {
-  width: 50vh;
-  height: 10vh;
-}
-
 .sidebar {
   border: 1px solid #fff;
   box-shadow: #282c34;
   width: 20%;
   padding-bottom: 50vh;
-}
-
-#home a {
-  color: white
-}
-
-.image {
-  background-image: url('./components/img.jpg');
-  /* Replace with the actual path to your image */
-  background-size: cover;
-  /* Adjust as needed */
-  background-position: center;
-  /* Adjust as needed */
-  height: 120vh;
-}
-
-.text {
-  padding: 54px;
-  color: white;
-  justify-content: flex-start;
-  font-size: 50px;
-}
-
-.text p {
-  font-size: 27px;
-}
-
-.card {
-  width: 85%;
-  height: 40vh;
 }
 
 .sidebar {
