@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import image1 from "../pexels-shvets-production-6975558.jpg";
-import myimage1 from "../components/pages/img1.png";
+import myimage1 from "./pages/Profile/img1.png";
 export default function Blog() {
   const fstyle = {
     borderRadius: "30px",

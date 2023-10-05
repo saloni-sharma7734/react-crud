@@ -1,7 +1,6 @@
 import React from "react";
 import myimage1 from "./img1.png";
-import Sidebar from "../Sidebar";
-
+import Sidebar from "../../Sidebar";
 export default function Profile() {
   const fstyle = {
     borderRadius: "30px",
@@ -10,7 +9,7 @@ export default function Profile() {
   return (
     <>
       {/* <div className="container-fluid"> */}
-        <Sidebar />
+        <Sidebar/>
         <div className="container my-lg-5 profile">
           <form>
             <div className="form-group">        

@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Sidebar from "./components/Sidebar";
-import Profile from "../src/components/pages/Profile";
+import Profile from "../src/components/pages/Profile/Profile";
 import Login from "../src/components/login";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
