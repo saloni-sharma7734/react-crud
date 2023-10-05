@@ -32,127 +32,198 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+.logo {
+  width: 50vh;
+  height: 10vh;
+}
 
+.sidebar {
+  border: 1px solid #fff;
+  box-shadow: #282c34;
+  width: 20%;
+  padding-bottom: 50vh;
+}
 
-.signup-container {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#home a {
+  color: white
+}
+
+.image {
+  background-image: url('./components/img.jpg');
+  /* Replace with the actual path to your image */
+  background-size: cover;
+  /* Adjust as needed */
+  background-position: center;
+  /* Adjust as needed */
+  height: 120vh;
+}
+
+.text {
+  padding: 54px;
+  color: white;
+  justify-content: flex-start;
+  font-size: 50px;
+}
+
+.text p {
+  font-size: 27px;
+}
+
+.card {
+  width: 85%;
+  height: 40vh;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 50vh;
   background-color: #fff;
-  margin-top: 5%;
-  background-image: url("../public/forest.jpg");
-  display: grid;
-  background-repeat: no-repeat;
-  align-items: center;
+  position: fixed;
   height: 100%;
-  padding-bottom: 100px;
+  overflow: auto;
+}
+.sidebar img{
+  width: 11.375rem;
+  
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 25px;
+  text-decoration: none;
+  font-family : Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  margin-left: 4vh;
+}
+.sidebar a img{
+  width: 24px;
+  padding-right: 10px;
 }
 
-
-
-
-.signup-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.sidebar a.active {
+  background-color: brown;
+  color: white;
 }
 
-.signup-form {
-  display: flex;
-  flex-direction: column;
-  display: grid;
-  align-items: center;
-  text-align: center;
+.sidebar a:hover:not(.active) {
+  background-color: #000;
+  color: white;
 }
+@media screen and (max-width: 380px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    font-size: 50%;
+  }
 
-.signup-form label {
-  font-weight: bold;
-  margin-bottom: 5px;
+  .sidebar a {
+    float: left;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
 }
+@media screen and (min-height: 100%) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    font-size: 50%;
+  }
 
-.signup-form input {
+  .sidebar a {
+    float: left;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 380px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+    width: 50%;
+  }
+}
+/* .avatar img{
+  width: 12vh;
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 16px;
-}
-
-.signup-form button {
-  background-color: #007bff;
-  color: #fff;
+  border-radius: 101px;
+} */
+.avatar{
+  margin-top: 3vh;
+  float: right;
+  margin-right: 2vh;
   padding: 10px;
-  border: none;
-  border-radius: 3px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.signup-form button:hover {
-  background-color: #0056b3;
-}
-.signup-form #bt2{
-  margin-bottom: 20px;
-}
-
-.login-container {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  margin-top: 15%;
-  background-image: url("../public/forest.jpg");
-  display: grid;
-  place-items: center;
+  /* gap: 10px; */
+  border-radius: 30px;
 }
+body{
+  background: #F4F7FE;
 
-.login-container h2 {
+  /* width: 100%;
+  height: 100vh;
+  margin-top: 200px; */
+}
+.navbar{
+  /* padding: 10px; */
+}
+.vector{
+  /* height: 24px; */
+  width: 24px;
+  /* padding: 8px; */
+}
+.search{
+  border-radius: 49px;
+  border: none !important;
+  background-color: #F4F7FE;
+  padding-left: 20px;
+  font-size: 14px;
+  width: 214px;
+  height: 41px;
+}
+.vector-avatar{
+  width: 41px;
+}
+.heading{
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 36px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 500;
+  padding-top: 1.75rem;
+  padding-left: 4rem;
 }
-
-.login-form {
-  display: flex;
-  flex-direction: column;
+.avatar-sec{
+  align-items: center;
 }
-
-.login-form label {
-  font-weight: bold;
-  margin-bottom: 5px;
+.profile{
+  padding-left: 19.375rem;
 }
-
-.login-form input {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 16px;
+.blog{
+  padding-left: 310px;
+  padding-top: 150px;
 }
-
-.login-form button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 3px;
-  font-size: 16px;
-  cursor: pointer;
+.blog-row1{
+  align-items: center;
+  /* justify-content: space-between; */ 
 }
-
-.login-form button:hover {
-  background-color: #0056b3;
+.blog-head{
+  font-size: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
 }
-.login-form #bt2{
-  margin-top: 20px;
+.blog-body{
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
 }
