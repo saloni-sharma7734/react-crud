@@ -12,7 +12,8 @@ export default function Profile(){
       <form>
       <div className="form-group">
                 <img src={myimage1}/><label for="image">&nbsp;<b>Profile Image</b></label><br/>
-                <input type="file" className="form-control-file"  id="image" accept="image/*" alt=""/>
+                <p>&nbsp;</p>
+                <input type="file" className="form-control-file"  id="image" accept="image/*" alt="profile_img"/>
             </div>
             <div className="form-group my-2">
                 <label for="username" className="headings"><b>Name</b></label><br/>
