@@ -36,3 +36,46 @@
     transform: rotate(360deg);
   }
 }
+<<<<<<< HEAD
+
+.logo{
+  width: 50vh;
+  height: 10vh;
+}
+.sidebar{
+  border: 1px solid black;
+  width: 30%;
+  padding-bottom: 50vh;
+}
+.sidebar ul{
+  padding: 25px;
+}
+.sidebar a {
+  color: grey;
+=======
+.logo1{
+  color: white;
+}
+#home a{ 
+  color: white
+}
+.image{
+background-image: url('./components/img.jpg'); /* Replace with the actual path to your image */
+background-size: cover; /* Adjust as needed */
+background-position: center; /* Adjust as needed */
+height: 120vh;
+}
+.text{
+  padding:54px;
+  color: white;
+  justify-content: flex-start;
+  font-size: 50px;
+}
+.text p{
+  font-size: 27px;
+}
+.card{
+  width: 85%;
+  height: 40vh;
+>>>>>>> a244047cc37f0db316f76f0dfb69c64ad22d9b67
+}
