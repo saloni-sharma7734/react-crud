@@ -90,8 +90,8 @@
   overflow: auto;
 }
 .sidebar img{
-  width: 40vh;
-  margin-left: 25px;
+  width: 11.375rem;
+  
 }
 .sidebar a {
   display: block;
@@ -102,9 +102,13 @@
   margin-top: 10px;
   margin-left: 4vh;
 }
+.sidebar a img{
+  width: 24px;
+  padding-right: 10px;
+}
 
 .sidebar a.active {
-  background-color: #016dd7;
+  background-color: brown;
   color: white;
 }
 
@@ -112,11 +116,12 @@
   background-color: #000;
   color: white;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 380px) {
   .sidebar {
     width: 100%;
     height: auto;
     position: relative;
+    font-size: 50%;
   }
 
   .sidebar a {
@@ -127,22 +132,99 @@
     margin-left: 0;
   }
 }
+@media screen and (min-height: 100%) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    font-size: 50%;
+  }
 
-@media screen and (max-width: px) {
+  .sidebar a {
+    float: left;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 380px) {
   .sidebar a {
     text-align: center;
     float: none;
+    width: 50%;
   }
 }
-.avatar img{
+/* .avatar img{
   width: 12vh;
   padding: 10px;
   border-radius: 101px;
-}
+} */
 .avatar{
   margin-top: 3vh;
   float: right;
   margin-right: 2vh;
-  padding: 20px;
+  padding: 10px;
   background-color: #fff;
+  /* gap: 10px; */
+  border-radius: 30px;
+}
+body{
+  background: #F4F7FE;
+
+  /* width: 100%;
+  height: 100vh;
+  margin-top: 200px; */
+}
+.navbar{
+  /* padding: 10px; */
+}
+.vector{
+  /* height: 24px; */
+  width: 24px;
+  /* padding: 8px; */
+}
+.search{
+  border-radius: 49px;
+  border: none !important;
+  background-color: #F4F7FE;
+  padding-left: 20px;
+  font-size: 14px;
+  width: 214px;
+  height: 41px;
+}
+.vector-avatar{
+  width: 41px;
+}
+.heading{
+  text-align: center;
+  font-size: 36px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 500;
+  padding-top: 1.75rem;
+  padding-left: 4rem;
+}
+.avatar-sec{
+  align-items: center;
+}
+.profile{
+  padding-left: 19.375rem;
+}
+.blog{
+  padding-left: 310px;
+  padding-top: 150px;
+}
+.blog-row1{
+  align-items: center;
+  /* justify-content: space-between; */ 
+}
+.blog-head{
+  font-size: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+}
+.blog-body{
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
 }

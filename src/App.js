@@ -1,24 +1,27 @@
 import "./App.css";
-import Login from "./components/login";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import Sidebar from "./components/Sidebar";
+import Profile from "../src/components/pages/Profile";
+import Login from "../src/components/login";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Dashboard from "./components/pages/Dashboard";
+import Blog from "./components/Blog";
 function App() {
   return (
- 
-      <BrowserRouter>
+    <BrowserRouter>
       <Routes>
-     
-        <Route exact path="" element={<Login/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/home" element={<Home/>} />
-        <Route path="/Navbar" element={<Navbar/>}/>
-      
-    </Routes>
+        <Route>
+          <Route />
+          <Route path = "/dashboard" element={<Dashboard/>}/>
+          <Route path = "/profile" element={<Profile/>}/>
+          <Route path = "/login" element={<Login/>}/>
+          <Route path = "/blog" element = {<Blog/>}/>
+        </Route>
+      </Routes>
     </BrowserRouter>
-   
   );
 }
 
 export default App;
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<App />);
