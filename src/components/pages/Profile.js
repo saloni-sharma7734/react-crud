@@ -8,7 +8,8 @@ export default function Profile(){
 
   return (
     <>
-    <div className="container-fluid my-lg-5">
+
+    <div className="container-fluid my-lg-5 profile">
       <form>
       <div className="form-group">
                 <img src={myimage1}/><label for="image">&nbsp;<b>Profile Image</b></label><br/>

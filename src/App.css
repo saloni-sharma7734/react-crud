@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 }
-<<<<<<< HEAD
+
 
 .logo{
   width: 50vh;
@@ -52,7 +52,7 @@
 }
 .sidebar a {
   color: grey;
-=======
+}
 .logo1{
   color: white;
 }
@@ -60,7 +60,7 @@
   color: white
 }
 .image{
-background-image: url('./components/img.jpg'); /* Replace with the actual path to your image */
+background-image: url(./components/img.jpg); /* Replace with the actual path to your image */
 background-size: cover; /* Adjust as needed */
 background-position: center; /* Adjust as needed */
 height: 120vh;
@@ -77,5 +77,7 @@ height: 120vh;
 .card{
   width: 85%;
   height: 40vh;
->>>>>>> a244047cc37f0db316f76f0dfb69c64ad22d9b67
+}
+.profile{
+    padding-left: 19.375 rem;
 }
