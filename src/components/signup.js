@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../components/signup.css";
 
 function Signup() {
   const [username, setUsername] = useState("");
@@ -8,7 +9,7 @@ function Signup() {
     window.location.href = "login";
   };
   const handlesignup = () => {
-    alert("signup successful");
+    window.location.href = "login";
   };
 
   return (
