@@ -13,28 +13,24 @@ import info from "../info.png";
 // import Profile from "./pages/Profile";
 import { Link } from "react-router-dom";
 export default function Sidebar() {
+  const handleLogout = () => {};
   return (
     <>
-      {" "}
       <div className="container-fluid d-flex">
         <div className="sidebar">
-          <img src={image1} alt="" className="mt-4 mb-5 mx-4 px-1"/>
+          <img src={image1} alt="" className="mt-4 mb-5 mx-4 px-1" />
           <Link className="" to="/dashboard">
             <img src={dash} alt=".." />
             DASHBOARD
           </Link>
-          {/* <a href="/">
-            <img src={nft} alt=".." />
-            NFT Marketplace
-          </a> */}
           <Link to="/blog">
             <img src={table} alt=".." />
             BLOG
           </Link>
-          <Link to="/Home">
+          {/* <Link to="/Home">
             <img src={kanban} alt=".." />
             logout
-          </Link>
+          </Link> */}
           <Link to="/profile">
             <img src={profile} alt=".." />
             PROFILE
@@ -50,12 +46,12 @@ export default function Sidebar() {
         <div className="row avatar-sec">
           <div className="col">
             {/* <form> */}
-              <input
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                className="search"
-              />
+            <input
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              className="search"
+            />
             {/* </form> */}
           </div>
           <div className="col">
@@ -68,7 +64,18 @@ export default function Sidebar() {
             <img src={info} alt=".." className="vector" />
           </div>
           <div className="col">
-            <img src={avatar} alt="avatar" className="vector-avatar" />
+            <button
+              type="button"
+              class="btn"
+              data-bs-container="body"
+              data-bs-toggle="popover"
+              data-bs-placement="bottom"
+              data-bs-content={
+                <button className="btn btn-primary">Logout</button>
+              }
+            >
+              <img src={avatar} alt="avatar" className="vector-avatar" />
+            </button>
           </div>
         </div>
       </div>

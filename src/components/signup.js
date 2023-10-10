@@ -6,7 +6,7 @@ import {
   RouterProvider,
   Route,
   Link,
-  } from "react-router-dom";
+} from "react-router-dom";
 import axios from "axios";
 function Signup() {
   const [username, setUsername] = useState("");
