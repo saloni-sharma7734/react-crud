@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+// import React, { useState, useEffect } from 'react';
 import "../components/signup.css";
-
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+  } from "react-router-dom";
+import axios from "axios";
 function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [data, setData] = useState([]);
 
   const handleLogin = () => {
     window.location.href = "login";
@@ -11,6 +19,24 @@ function Signup() {
   const handlesignup = () => {
     window.location.href = "login";
   };
+
+  // const getData = () => {
+  //     axios.get("http://localhost:4000/user/getall").then((data) => {
+  //       console.log(data,"data5656")
+  //   setData(data?.data || [])
+  //     });
+  //   };
+  // useEffect(() => {
+  //   getData()
+
+  //   // axios.get('/api/someEndpoint')
+  //   //   .then(response => {
+  //   //     setData(response.data);
+  //   //   })
+  //   //   .catch(error => {
+  //   //     // Handle errors
+  //   //   });
+  // }, []); // Empty dependency array means this effect runs once on component mount
 
   return (
     <>
@@ -63,7 +89,7 @@ function Signup() {
           </div>
           <div className="row">
             <div className="col">
-            <label htmlFor="Username">Username:</label></div>
+            <label htmlFor="username">Username:</label></div>
            <div className="col"> <input type="text" id="username" /></div>
           </div>
           <div className="row">

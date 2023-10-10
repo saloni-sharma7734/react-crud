@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import image1 from "../components/card3.jpg";
 import image2 from "../components/coding2.jpg";
 import './Home.css';
@@ -8,8 +8,29 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import axios from "axios";
 
 const Navbar = () => {
+const [name ,setName] = useState()
+  useEffect(() => {
+
+
+   
+        axios.get("http://localhost:4000/user/getall")
+        .then((data) => 
+        console.log(data.data)
+        )
+        ;
+    
+    // axios.get('/api/someEndpoint')
+    //   .then(response => {
+    //     setData(response.data);
+    //   })
+    //   .catch(error => {
+    //     // Handle errors
+    //   });
+  }, []); // Empty dependency array means this effect runs once on component mount
+
   return (
     <div className="image">
       <nav className="navbar navbar-expand-lg bg-color-transparent">
