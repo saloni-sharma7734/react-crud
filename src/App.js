@@ -8,6 +8,7 @@ import Dashboard from "./components/pages/Dashboard";
 import Blog from "./components/Blog";
 import Signup from "./components/signup";
 import Home from"./components/Home";
+
 function App() {
   return (
     <BrowserRouter>

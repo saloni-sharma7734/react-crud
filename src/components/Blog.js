@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import Sidebar from "./Sidebar";
 import image1 from "../pexels-shvets-production-6975558.jpg";
 import myimage1 from "./pages/Profile/img1.png";
+import axios from "axios";
 export default function Blog() {
   const fstyle = {
     borderRadius: "30px",
-  };
+  }
+  
+    const [image, setimage] = useState("");
+    const [title, settitle] = useState("");
+    const [description, setdescription] = useState("");
+ 
+  
+    
+  
+  
+    const getData = () => {
+      axios.get('/blogusers').then(({ data: data }) => {
+        console.log(data);
+      });
+    };
+  
+  
+  
   return (
     <>
       <Sidebar />
@@ -32,7 +50,7 @@ export default function Blog() {
                 </div>
                 <div class="modal-body">
                   {/* <div className="container my-lg-5"> */}
-                    <form>
+                    <form onSubmit={getData}>
                       <div className="form-group">
                         <img src={myimage1} alt=".." />
                         <label for="image">
@@ -40,11 +58,13 @@ export default function Blog() {
                         </label>
                         <br />
                         <input
-                          type="file"
-                          className="form-control-file"
-                          id="image"
-                          accept="image/*"
-                          alt=""
+                        type="file"
+                        className="form-control-file"
+                        id="image"
+                        accept="image/*"
+                        alt=""
+                        value={image}
+                        onChange={(e) => setimage(e.target.value)}
                         />
                       </div>
                       <div className="form-group my-2">
@@ -58,6 +78,8 @@ export default function Blog() {
                           id="title"
                           style={fstyle}
                           placeholder="Enter your title"
+                          value={title}
+                          onChange={(e) => settitle(e.target.value)}
                         />
                       </div>
                       <div className="form-group my-2">
@@ -66,18 +88,19 @@ export default function Blog() {
                         </label>
                         <br />
                         <input
-                          type="textarea"
-                          className="form-control my-2"
-                          id="descp"
-                          style={fstyle}
-                          placeholder="Enter your description"
+                         className="form-control my-2"
+                         id="descp"
+                         style={fstyle}
+                         placeholder="Enter your description"
+                         value={description}
+                         onChange={(e) => setdescription(e.target.value)}
                         />
                       </div>
                     </form>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
-                    <button type="button" class="btn btn-primary">Create Blog</button>
+                    <button type="submit" class="btn btn-primary"onSubmit={getData}>Create Blog</button>
                   </div>
                 </div>
               </div>
@@ -116,6 +139,7 @@ export default function Blog() {
                   </div>
                   <div className="col-2">
                     <img src={image1} alt=".." />
+                    
                   </div>
                   <div className="col">
                     <p className="blog-text">Title</p>
