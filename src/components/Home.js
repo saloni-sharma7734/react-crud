@@ -32,9 +32,9 @@ const Navbar = () => {
           </button>
           <ul class="nav justify-content-end " id="home">
             <li class="nav-item ">
-              <a class="nav-link active" href="#">
+              <Link class="nav-link active" to="/home">
                 Home
-              </a>
+              </Link>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
