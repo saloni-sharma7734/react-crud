@@ -58,7 +58,7 @@ export default function Profile() {
               </label>
               <br />
               <input
-                type="number"
+                type="tel"
                 className="form-control my-2"
                 id="pnumber"
                 style={fstyle}
