@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../components/login.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -12,9 +12,10 @@ function Login() {
     axios
       .post("http://localhost:3001/login", { username, password })
       .then((result) => {
-        console.log(result?.data,"data4545");
+        // console.log(result?.data,"data4545");
         if (result.data.message === "Success") {
           localStorage.setItem('user',JSON.stringify(result.data?.data))
+          localStorage.setItem('token',JSON.stringify(result?.data.token))
           navigate("/dashboard");
         } else if (result.data === "Username or password is incorrect") {
           alert("Please check your credentials and try again");

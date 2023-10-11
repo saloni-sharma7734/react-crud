@@ -3,8 +3,8 @@ const mongoose = require("mongoose"); // Mongoose Module Import
 const cors = require("cors"); // Cors Module Import
 const bcrypt = require("bcrypt"); // bcrypt Module Import
 const saltRounds = 10; // Number of Salt rounds used in Encryption of the password
-const UsersModel = require("./src/DataBase/UsersSchema"); // Schema created for the Users
-
+const UsersModel = require("./src/DataBase/Schema"); // Schema created for the Users
+const jwt = require('jsonwebtoken')
 // Creating app variable to assigning
 
 const app = express();
@@ -26,7 +26,7 @@ app.post("/signup", async (req, res) => {
             .then((users) => res.json(users))
             .catch((err) => res.json(err));
     }
-    else{
+    else {
         res.json("Username Unavailable");
     }
 });
@@ -39,7 +39,8 @@ app.post("/login", async (req, res) => {
     if (userData) {
         const match = await bcrypt.compare(password, userData.password);
         if (match) {
-            res.json({message: "Success",data: userData});
+            const token = await jwt.sign({ userId: userData._id }, 'knauezebdgbuviuegyberjdbvfiuarwjp0232823y8732fui2gu2q', { expiresIn: "1h" });
+            res.json({ message: "Success", data: userData, token: token });
         } else {
             console.log(match);
             res.json("Username or password is incorrect");
@@ -49,9 +50,24 @@ app.post("/login", async (req, res) => {
     }
 });
 
-app.put("/updateprofile", async(req, res)=>{
-    
-})
+app.get("/getprofiledata/:id", async (req, res) => {
+    try {
+        let data = await UsersModel.findById(req.params.id);
+        res.json(data)
+    } catch (err) {
+        console.log(err)
+    }
+});
+app.put("/updateprofile/:id", async (req, res) => {
+    try {
+        const data = await UsersModel.findByIdAndUpdate(req.params.id, {
+            $set: req.body
+        });
+        res.json(data);
+    }catch(err){
+        console.log(err);
+    }
+});
 app.listen(3001, () => {
     console.log(`Server is running on port ${3001}`);
 });

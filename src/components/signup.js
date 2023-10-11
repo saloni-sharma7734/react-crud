@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../components/signup.css";
 import { Link , useNavigate} from "react-router-dom";
 import axios from "axios";
@@ -6,7 +6,7 @@ import axios from "axios";
 function Signup() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const [mobile, setMobile] = useState("");
+  const [number, setNumber] = useState("");
   const [age, setAge] = useState("");
   const [username, setUsername] = useState("");
   const [gender, setGender] = useState("");
@@ -15,7 +15,7 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:3001/signup', { name, email, mobile, age, username, password, gender })
+      .post('http://localhost:3001/signup', { name, email, number, age, username, password, gender })
       .then((result) => {console.log(result)
       if(result.data === "Username Unavailable"){
         alert("Username Unavailable. Please choose a different username");
@@ -49,6 +49,8 @@ function Signup() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   title = "Only Alphabets upto 45 characters"
+                  pattern="[a-zA-Z a-zA-Z]*"
+                  maxLength={45}
                   required
                 />
               </div>
@@ -73,11 +75,12 @@ function Signup() {
               </div>
               <div className="col">
                 <input
-                  type="number"
+                  type="tel"
                   id="number"
-                  value = {mobile}
-                  onChange={(e) => setMobile(e.target.value)}
+                  value = {number}
+                  onChange={(e) => setNumber(e.target.value)}
                   maxLength={10}
+                  pattern="[0-9]{10}"
                   required
                 ></input>
               </div>

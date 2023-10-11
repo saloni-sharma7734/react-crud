@@ -166,6 +166,9 @@ body{
 .vector-avatar{
   width: 41px;
 }
+.vector-avatar:hover{
+  cursor:pointer;
+}
 .heading{
   text-align: center;
   font-size: 36px;
@@ -173,6 +176,7 @@ body{
   font-weight: 500;
   padding-top: 1.75rem;
   padding-left: 4rem;
+  margin-left: 16rem;
 }
 .avatar-sec{
   align-items: center;

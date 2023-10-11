@@ -4,7 +4,6 @@ import avatar from "../avatar.jpg";
 import dash from "../dash.svg";
 // import nft from "../nft.png";
 import table from "../table.png";
-import kanban from "../kanban.png";
 import profile from "../profile.png";
 // import sign from "../sign.png";
 import notify from "../notification.png";
@@ -13,7 +12,8 @@ import info from "../info.png";
 // import Profile from "./pages/Profile";
 import { Link } from "react-router-dom";
 export default function Sidebar() {
-  const handleLogout = () => {};
+  const user = JSON.parse(localStorage.getItem('user'));
+  // const handleLogout = () => {};
   return (
     <>
       <div className="container-fluid d-flex">
@@ -27,18 +27,10 @@ export default function Sidebar() {
             <img src={table} alt=".." />
             BLOG
           </Link>
-          {/* <Link to="/Home">
-            <img src={kanban} alt=".." />
-            logout
-          </Link> */}
           <Link to="/profile">
             <img src={profile} alt=".." />
             PROFILE
           </Link>
-          {/* <a href="#news">
-            <img src={sign} alt=".." />
-            Sign in
-          </a> */}
         </div>
         <div className="cover"></div>
       </div>
@@ -52,7 +44,6 @@ export default function Sidebar() {
               aria-label="Search"
               className="search"
             />
-            {/* </form> */}
           </div>
           <div className="col">
             <img src={notify} alt=".." className="vector" />
@@ -64,18 +55,38 @@ export default function Sidebar() {
             <img src={info} alt=".." className="vector" />
           </div>
           <div className="col">
-            <button
-              type="button"
-              class="btn"
-              data-bs-container="body"
-              data-bs-toggle="popover"
-              data-bs-placement="bottom"
-              data-bs-content={
-                <button className="btn btn-primary">Logout</button>
-              }
-            >
-              <img src={avatar} alt="avatar" className="vector-avatar" />
-            </button>
+            <img
+              src={avatar}
+              alt=""
+              className="vector-avatar dropdown-toggle"
+              data-bs-toggle="dropdown"
+            />
+            <ul class="dropdown-menu">
+              <li>
+                <p className="px-3">Hello, {user.name}</p>
+              </li>
+              <li><hr className="dropdown-divider"/></li>
+              <li>
+                <Link to="/Dashboard" className="dropdown-item">
+                  Dashboard
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="dropdown-item">
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link to="/profile" className="dropdown-item">
+                  Profile
+                </Link>
+              </li>
+              <li>
+                <Link class="dropdown-item" to="/login">
+                  <button className="btn btn-danger">Logout</button>
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

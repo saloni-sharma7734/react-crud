@@ -11,8 +11,6 @@ const UsersSchema = new mongoose.Schema({
     city: String,
     state: String,
     country: String
-},{
-    timestamps: true
 });
 
 module.exports = mongoose.model('Users', UsersSchema);
