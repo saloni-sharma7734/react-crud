@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import Sidebar from "./Sidebar";
 import image1 from "../pexels-shvets-production-6975558.jpg";
 import myimage1 from "./pages/Profile/img1.png";
@@ -6,6 +6,37 @@ export default function Blog() {
   const fstyle = {
     borderRadius: "30px",
   };
+
+  const [blogObj, setBlogObj] = useState({
+    "title":"",
+    "description" : "",
+    "image":""
+  })
+
+  const updateBlogForm = (e,field) =>{
+    setBlogObj((prevValue)=>{
+      return {
+        title: field=='title' ? e.target.value : prevValue.title,
+        description: field=='description' ? e.target.value : prevValue.description,
+        image: field=='image' ? e.target.value : prevValue.image,
+      }
+    })
+  }
+
+  const createBlog = () =>{
+    console.log("data5656",blogObj);
+  }
+  function deleteUser(id)
+  {
+    fetch('http://localost:4000/blog/$(id)',{
+      method:'DELETE'
+    }).then((result))=>{
+      result.json().then((resp)=>{
+      console.warn(resp)
+      })
+  }
+  }
+
   return (
     <>
       <Sidebar />
@@ -51,7 +82,7 @@ export default function Blog() {
                   ></button>
                 </div>
                 <div class="modal-body">
-                  {/* <div className="container my-lg-5"> */}
+                  
                   <form>
                     <div className="form-group">
                       <img src={myimage1} alt=".." />
@@ -78,6 +109,8 @@ export default function Blog() {
                         id="title"
                         style={fstyle}
                         placeholder="Enter your title"
+                        value={blogObj.title}
+                        onChange={(e)=> updateBlogForm(e,"title")}
                       />
                     </div>
                     <div className="form-group my-2">
@@ -91,6 +124,8 @@ export default function Blog() {
                         id="descp"
                         style={fstyle}
                         placeholder="Enter your description"
+                        value={blogObj.description}
+                        onChange={(e)=> updateBlogForm(e,"description")}
                       />
                     </div>
                   </form>
@@ -103,7 +138,7 @@ export default function Blog() {
                   >
                     Discard
                   </button>
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" onClick={()=> createBlog()} class="btn btn-primary">
                     Create Blog
                   </button>
                 </div>
@@ -137,7 +172,7 @@ export default function Blog() {
               </div>
             </div>
             <div className="blog-body-sec">
-              {/* <hr /> */}
+              
               <div className="row">
                 <div className="col-1">
                   <p className="blog-text">1</p>
@@ -165,7 +200,7 @@ export default function Blog() {
                         </button>
                       </div>
                       <div className="col">
-                        <button className="btn-light btn">Delete</button>
+                        <button className="btn-light btn" onClick={()=>deleteUser(item.id)}>Delete</button>
                       </div>
                     </div>
                   </div>
